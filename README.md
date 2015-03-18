@@ -1,6 +1,6 @@
 # Docker Registry
 
-This Docker image contains a Docker registry you can use to run your own, private repository in your organization. Please see this [blog post][https://blog.codecentric.de/en/2014/02/docker-registry-run-private-docker-image-repository/] for details.
+This Docker image contains a Docker registry you can use to run your own, private repository in your organization. Please see this [blog post][blog-post] for details.
 
 In the default configuration (local), the registry container uses a local directory in the file system to store images. This directory is configured to use a separate volume `/docker-registry-storage` which can be mapped by the `docker run -v` parameter -- see `Makefile` target `start-registry`. In order to correctly run parallel work threads, the configuration file `config.yml` contains a `secret_key`. 
 
@@ -29,6 +29,6 @@ Run from GitHub repository:
 * To stop the registry, run `make stop-registry`
 * To clean all artifacts including the locally stored images, run `make clean`
 
-[blog-post]: blog
+[blog-post]: https://blog.codecentric.de/en/2014/02/docker-registry-run-private-docker-image-repository/
 [github-repo]: https://github.com/lukaspustina/docker-registry
 
